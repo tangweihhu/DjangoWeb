@@ -20,7 +20,7 @@ from calc import views as calc_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', learn_view.index),
+    url(r'^$', learn_view.home, name='home'),
     url(r'^add/$', calc_view.add, name='add'),
     url(r'^add/(0x[0-9a-f]+)/(0x[0-9a-f]+)/$', calc_view.add2, name='add2'),
     url(r'^add/(\d+)/(\d+)/$', calc_view.add2, name='add2'),
