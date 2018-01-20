@@ -1,4 +1,4 @@
-"""Django_learning URL Configuration
+"""mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,15 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from learn import views as learn_view
-from calc import views as calc_view
-from MyBlog.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', learn_view.home, name='home'),
-    url(r'^add/$', calc_view.add, name='add'),
-    url(r'^add/(0x[0-9a-f]+)/(0x[0-9a-f]+)/$', calc_view.add2, name='add2'),
-    url(r'^add/(\d+)/(\d+)/$', calc_view.add2, name='add2'),
-    url(r'^myBlogs/$',myBlogs),
 ]
